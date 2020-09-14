@@ -78,8 +78,8 @@ var tokyo = {
      }
     }
 };
-seattel.numOfCustomer();
-seattel.render();
+tokyo.numOfCustomer();
+tokyo.render();
 
 
 
@@ -122,8 +122,8 @@ var dubai = {
      }
     }
 };
-seattel.numOfCustomer();
-seattel.render();
+dubai.numOfCustomer();
+dubai.render();
 
 
 var paris = {
@@ -164,8 +164,8 @@ var paris = {
      }
     }
 };
-seattel.numOfCustomer();
-seattel.render();
+paris.numOfCustomer();
+paris.render();
 
 
 var lima = {
@@ -206,5 +206,5 @@ var lima = {
      }
     }
 };
-seattel.numOfCustomer();
-seattel.render();
+lima.numOfCustomer();
+lima.render();
