@@ -1,43 +1,22 @@
-'use strict';
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-var seattle = {
-    name: 'seattle',
+var seattel = {
+    location: 'seattel',
+    maxCustomers: 62,
     minCustomers: 23,
-    maxCustomers: 65,
     avgCookies: 6.3,
+    hours: ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00am', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'],
+    total: 0,
     numOfCookiesPurHour: [],
-    total : 0,
-
     numOfCustomer: function () {
-
-        // console.log(this.minCustomers,this.maxCustomers);
-
-        for (var i = 0; i < hours.length; i++)
-            // this.numOfCookiesPurHour[i] = getRandomNumber(this.minCustomers, this.maxCustomers);
-            var cook = Math.round(Math.round(Math.round()*(this.maxCustomers- this.minCustomers + 1))+this.minCustomers)*this.avgCookies;
-            console.log(cook);
+        for (let index = 0; index < this.hours.length; index++) {
+            var cook = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
+            this.total += cook;
             this.numOfCookiesPurHour.push(cook);
-            this.total+= cook;
-            console.log(this.numOfCustomer);
-            console.log(this.total);
-
-
-        //         var randomly = Math.floor (Math.floor()* this.maxCustomers - this.minCustomers +1) + this.minCustomers;
-        //          console.log(randomly);
-        //         this.numOfCookiesPurHour.push(Math.floor(this.avgCookies) * randomly);
-        // this.total = this.total + (this.numOfCookiesPurHour[i]);
-
-        //     }
-
+        }
+        console.log(this.total);
         console.log(this.numOfCookiesPurHour);
-        // }
-    
     }
-
-}
-
-seattle.numOfCustomer();
-
+};
+seattel.numOfCustomer();
 
 // function getRandomNumber(min, max) {
 //     var random = Math.random();
