@@ -33,7 +33,6 @@ function Cookie(location, maxCustomers, minCustomers, avgCookies) {
     this.maxCustomers = maxCustomers;
     this.minCustomers = minCustomers;
     this.avgCookies = avgCookies;
-    this.hours = hours;
     this.total = 0;
     this.numOfCookiesPurHour = [];
     this.numOfCustomer = [];
