@@ -25,7 +25,6 @@ function addHeader() {
 addHeader();
 
 var allLocation = [];
-var arr = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 function Cookie(location, maxCustomers, minCustomers, avgCookies) {
 
@@ -46,7 +45,7 @@ Cookie.prototype.calculateNumOfCustomer = function () {
         this.total += cookies;
         this.numOfCookiesPurHour.push(cookies);
     };
-    console.log(cookies);
+  
 };
 
 Cookie.prototype.render = function () {
@@ -83,44 +82,27 @@ for (var i = 0; i < allLocation.length; i++) {
 
 
     function addFooter (){
-        var tr = document.write('tr');
-        tr.textContent= ('Total');
-        for 
-    
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+        var td = document.createElement('td');
+        td.textContent= 'Total';
+        tr.appendChild(td);
+        var totalOfTotal =0; 
+        for (var i = 0; i < hours.length; i++) {
+            var sum = 0;
+            
+        for (var j = 0; j < allLocation.length; j++) {
+            sum += allLocation[j].numOfCookiesPurHour[i];
+            // td.textContent = sum;
+        }
+        var td = document.createElement('td');
+        tr.appendChild(td);
+        td.textContent = sum;
+        totalOfTotal += sum;
     }
+        td = document.createElement('td');
+        td.textContent= totalOfTotal;
+        tr.appendChild(td);
 
-
-// function addFooter() {
-
-//     var tr = document.createElement('tr');
-//     table.appendChild(tr);
-//     var td = document.createElement('td');
-//     tr.appendChild(td);
-//     td.textContent = 'Total';
-
-//     var sum = 0;
-//     for (var i = 0; i < hours.length; i++) {
-//         for (var j = 0; j < allLocation.length; j++) {
-//             sum += allLocation[j].numOfCookiesPurHour[i];
-//             var td = document.createElement('td');
-//             tr.appendChild(td);
-//             // td.textContent = sum;
-//         }
-//         td.textContent = sum;
-//     }
-
-// }
-// addFooter();
-// console.log(seattle.render());
-// console.log(tokyo.render());
-// console.log(dubai.render());
-// console.log(paris.render());
-
-
-    // for ( var rowCount=0; rowCount<=6 ; rowCount++ ){
-    //     var table =document.createElement('table');
-    //     body.appendChild(table);
-    //     var tr = document.createElement('tr');
-    //     table.appendChild(tr);
-    //     tr.textContent = this.hours[i] 
-    // }
+}
+addFooter();
