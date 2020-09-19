@@ -8,6 +8,10 @@
             var headerRow = document.createElement('tr');
             var th = document.createElement('th');
             headerRow.appendChild(th);
+for (var i = 0; i < allLocation.length; i++) {
+    allLocation[i].calculateNumOfCustomer();
+    allLocation[i].render();
+}
 
             for (var i = 0; i < hours.length; i++) {
                 th = document.createElement('th');
