@@ -15,8 +15,8 @@ var seattle = {
             this.total += cookies;
             this.numOfCookiesPurHour.push(cookies);
         }
-        console.log(this.total);
-        console.log(this.numOfCookiesPurHour);
+        // console.log(this.total);
+        // console.log(this.numOfCookiesPurHour);
 
     },
 
@@ -64,7 +64,6 @@ var tokyo = {
     },
     render: function () {
         var body = document.getElementById('bodyPage');
-
         var parentElement = document.createElement('article');
         body.appendChild(parentElement);
         var h1 = document.createElement('h1');
@@ -101,8 +100,8 @@ var dubai = {
             this.total += cook;
             this.numOfCookiesPurHour.push(cook);
         }
-        console.log(this.total);
-        console.log(this.numOfCookiesPurHour);
+        // console.log(this.total);
+        // console.log(this.numOfCookiesPurHour);
 
     },
     render: function () {
@@ -146,8 +145,8 @@ var paris = {
             this.total += cook;
             this.numOfCookiesPurHour.push(cook);
         }
-        console.log(this.total);
-        console.log(this.numOfCookiesPurHour);
+        // console.log(this.total);
+        // console.log(this.numOfCookiesPurHour);
 
     },
     render: function () {
@@ -188,8 +187,8 @@ var lima = {
             this.total += cook;
             this.numOfCookiesPurHour.push(cook);
         }
-        console.log(this.total);
-        console.log(this.numOfCookiesPurHour);
+        // console.log(this.total);
+        // console.log(this.numOfCookiesPurHour);
 
     },
     render: function () {
