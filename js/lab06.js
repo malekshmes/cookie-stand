@@ -9,9 +9,9 @@ var seattle = {
     total: 0,
     numOfCookiesPurHour: [],
 
-    numOfCustomer: function () {
+    numOfCookies: function () {
         for (var i = 0; i < this.hours.length; i++) {
-            var cookies = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
+            var cookies = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers)* this.avgCookies;
             this.total += cookies;
             this.numOfCookiesPurHour.push(cookies);
         }
@@ -41,7 +41,7 @@ var seattle = {
         unordereList.appendChild(total);
     }
 }
-seattle.numOfCustomer();
+seattle.numOfCookies();
 seattle.render();
 var tokyo = {
     location: 'tokyo',
@@ -52,7 +52,7 @@ var tokyo = {
     total: 0,
     numOfCookiesPurHour: [],
 
-    numOfCustomer: function () {
+    numOfCookies: function () {
         for (let index = 0; index < this.hours.length; index++) {
             var cook = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
             this.total += cook;
@@ -83,7 +83,7 @@ var tokyo = {
         unordereList.appendChild(total);
     }
 }
-tokyo.numOfCustomer();
+tokyo.numOfCookies();
 tokyo.render();
 var dubai = {
     location: 'dubai',
@@ -95,7 +95,7 @@ var dubai = {
     total: 0,
     numOfCookiesPurHour: [],
 
-    numOfCustomer: function () {
+    numOfCookies: function () {
         for (let index = 0; index < this.hours.length; index++) {
             var cook = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
             this.total += cook;
@@ -126,7 +126,7 @@ var dubai = {
         unordereList.appendChild(total);
     }
 };
-dubai.numOfCustomer();
+dubai.numOfCookies();
 dubai.render();
 
 
@@ -140,7 +140,7 @@ var paris = {
     total: 0,
     numOfCookiesPurHour: [],
 
-    numOfCustomer: function () {
+    numOfCookies: function () {
         for (let index = 0; index < this.hours.length; index++) {
             var cook = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
             this.total += cook;
@@ -182,7 +182,7 @@ var lima = {
     total: 0,
     numOfCookiesPurHour: [],
 
-    numOfCustomer: function () {
+    numOfCookies: function () {
         for (let index = 0; index < this.hours.length; index++) {
             var cook = Math.round((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
             this.total += cook;
@@ -215,5 +215,5 @@ var lima = {
     
 };
 
-lima.numOfCustomer();
+lima.numOfCookies();
 lima.render();
