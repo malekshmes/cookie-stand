@@ -8,7 +8,7 @@ body.appendChild(table);
 function addHeader() {
     var headerRow = document.createElement('tr');
     var th = document.createElement('th');
-    headerRow.appendChild(th);
+    headerRow.appendChild(th); // for the first empty cell
 
     for (var i = 0; i < hours.length; i++) {
         th = document.createElement('th');
