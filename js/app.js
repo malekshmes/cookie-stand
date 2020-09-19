@@ -41,7 +41,7 @@ console.log(allLocation);
 Cookie.prototype.calculateNumOfCustomer = function () {
 
     for (let index = 0; index < hours.length; index++) {
-        var cookies = Math.floor((Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers) * this.avgCookies);
+        var cookies = Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgCookies);
         this.total += cookies;
         this.numOfCookiesPurHour.push(cookies);
     };
@@ -63,8 +63,6 @@ Cookie.prototype.render = function () {
     td = document.createElement('td');
     td.textContent = this.total;
     tr.appendChild(td);
-
-
 };
 var seattle = new Cookie('seattle', 65, 23, 6.3);
 var tokyo = new Cookie('tokyo', 24, 3, 1.2);
