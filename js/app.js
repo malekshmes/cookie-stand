@@ -8,13 +8,13 @@ body.appendChild(table);
 function addHeader() {
     var headerRow = document.createElement('tr');
     var th = document.createElement('th');
-    headerRow.appendChild(th); // for the first empty cell
+    headerRow.appendChild(th);
 
     for (var i = 0; i < hours.length; i++) {
         th = document.createElement('th');
         th.textContent = hours[i];
         headerRow.appendChild(th);
-
+    
     }
     th = document.createElement('th');
     th.textContent = 'Daily location total';
@@ -77,8 +77,6 @@ for (var i = 0; i < allLocation.length; i++) {
     allLocation[i].render();
 }
 
-
-
     function addFooter (){
         var tr = document.createElement('tr');
         table.appendChild(tr);
@@ -104,3 +102,29 @@ for (var i = 0; i < allLocation.length; i++) {
 
 }
 addFooter();
+
+var form = document.getElementById('form');
+form.addEventListener('submit', function (newEvent){
+newEvent.preventDefault();
+// console.log(newEvent);
+// console.log('location '+ newEvent.target.locationField.value);
+var location = newEvent.target.locationField.value;
+var maxCustomers = newEvent.target.maxCust.value;
+var minCustomers = newEvent.target.minCust.value;
+var avgCookies = newEvent.target.avgCookies.value;
+var addedLocation = new Cookie(location, maxCustomers, minCustomers, avgCookies);
+    
+table.textContent= '';
+addHeader();
+
+for (var i = 0; i < allLocation.length; i++) {
+    allLocation[i].calculateNumOfCustomer();
+    allLocation[i].render();
+}
+addFooter();
+
+//   addedLocation.calculateNumOfCustomer();
+//   addedLocation.render()
+});
+
+
