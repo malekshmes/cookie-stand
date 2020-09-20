@@ -1,0 +1,16 @@
+#first{
+    background-color: grey;
+    border: 200px solid whitesmoke;
+    width: 200px;
+    margin-right: 20px;
+}
+
+#second{
+    background-color: grey;
+    height: 200px;
+    width: 800px;
+}
+#third {
+    background-color: rgb(185, 0, 0);
+   
+}
